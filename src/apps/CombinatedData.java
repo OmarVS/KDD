@@ -42,9 +42,11 @@ public class CombinatedData {
                     valor=Integer.parseInt(datos[0]);
                 }
                 else {
-                    String cadena=valor+","+linea;
+                    datos=linea.split(",");
+                    //String cadena=valor+","+linea;
+                    String cadena="\""+valor+"\",\""+datos[0]+"\","+datos[1]+",\""+datos[2]+"\"";
                     pw.println(cadena);
-                    //System.out.println(cadena);
+                    System.out.println(cadena);
                 }
             }
         }catch(IOException e){}
